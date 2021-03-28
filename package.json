@@ -1,0 +1,25 @@
+{
+  "name": "printerprotocol",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "truffle migrate --network dev --f 2 --to 2",
+    "testnet": "truffle migrate --network testnet --f 2 --to 2",
+    "testnet-nft": "truffle migrate --network testnet --f 3 --to 3",
+    "mainnet": "truffle migrate --network mainnet --f 2 --to 2",
+    "test": "truffle test test/token.test.js --network dev --show-events --stacktrace --bail",
+    "live": "nodemon --exec yarn test -e sol,js"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "^3.1.0",
+    "@openzeppelin/contracts-upgradeable": "^3.4.0",
+    "@openzeppelin/test-environment": "^0.1.9",
+    "@openzeppelin/test-helpers": "^0.5.10",
+    "@openzeppelin/truffle-upgrades": "^1.5.0",
+    "@truffle/hdwallet-provider": "^1.2.2",
+    "dotenv": "^8.2.0",
+    "truffle-contract-size": "^2.0.1",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "truffle-plugin-verify": "^0.5.4"
+  }
+}
